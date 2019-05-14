@@ -28,14 +28,13 @@ public class Adaptador implements IAdaptador<Cliente> {
 			conversorW.writeBoolean(objeto.isPreferente());
 			conversorW.writeFloat(objeto.getSaldo());
 			retorno = true;
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
-			try {
-				flujoW.close();
-			} catch (IOException e1) {
-				e1.printStackTrace();
-			}
+			e.printStackTrace();
+		}
+		try {
+			flujoW.close();
+		} catch (IOException e1) {
+			e1.printStackTrace();
 		}
 		return retorno;
 	}
