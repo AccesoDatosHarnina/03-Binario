@@ -1,0 +1,5 @@
+Adecuador de articulos para grabar y Cliente y Articulo para leer
+grabar para adaptador de varios objetos, es decir que admite un arraylist 
+o un objeto individual
+Si os queda tiempo aplciad un bridge para que este ultimo funcione con cualquier
+tipo de Objetos
