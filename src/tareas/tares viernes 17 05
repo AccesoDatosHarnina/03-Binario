@@ -1,5 +1,9 @@
+16-05-19
 Adecuador de articulos para grabar y Cliente y Articulo para leer
 grabar para adaptador de varios objetos, es decir que admite un arraylist 
 o un objeto individual
 Si os queda tiempo aplciad un bridge para que este ultimo funcione con cualquier
 tipo de Objetos
+17-05-19
+Arreglar la version 5 sobre facade
+Crea un adaptador para adaptadorTExtOld
