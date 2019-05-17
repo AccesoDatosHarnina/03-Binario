@@ -7,7 +7,7 @@ import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
 public class Consumidor {
-
+	//esta es la parte de la sobreescritura
 	public static void main(String[] args) {
 		ObjectInputStream deserilizador = null;
 		Cliente cliente=null;
