@@ -1,0 +1,7 @@
+Crea un DTO (Almacen para nosotros) que valga para almacenar pacientes.
+VAmos a crear un directorio donde hay tanto ficheros como pacientes.
+Cada fichero contiene el objeto correspondiente al paciente
+El nombre del fichero viene dado por el ID del paciente
+Como buscamos un paciente por el nombre?
+La idea es tener otro archivo indice.ind
+Que almacena un mapa (Map) con el nombre como clave y el ID como valor
