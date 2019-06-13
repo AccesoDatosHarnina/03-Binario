@@ -1,4 +1,4 @@
-package variosMismoFichero;
+package variosMismoFichero09;
 
 import java.util.List;
 
@@ -34,12 +34,16 @@ public class DTOList<K, T> implements DTO<K, T> {
 
 	@Override
 	public boolean grabar(T t, K k) {
+		//No recogemos el error de que uno de los dos archivos se grabe mal
 		boolean retorno = false;
 		if (datos.grabar(pathDatos, t, true)) {
 			indice.establecer(k);
 			if (indiceDAO.grabar(pathIndice, indice.getLista())) {
 				retorno = true;
-			} 
+			}else {
+				//Deshacer el ultimo grabado en el fichero de datos
+				datos.borrarElemento(pathDatos,indice.getLista().size());
+			}
 		}
 		return retorno;
 	}

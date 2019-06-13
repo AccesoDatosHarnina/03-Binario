@@ -1,4 +1,4 @@
-package variosMismoFichero;
+package variosMismoFichero09;
 
 public interface Indice<K> {
 	public int obtener(K k);

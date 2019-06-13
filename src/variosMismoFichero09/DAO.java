@@ -1,4 +1,4 @@
-package variosMismoFichero;
+package variosMismoFichero09;
 
 import java.io.Closeable;
 import java.io.File;
@@ -119,6 +119,32 @@ public class DAO<T> {
 	public void borrar(String rutaarchivo) {
 		File file = new File(rutaarchivo);
 		file.delete();
+	}
+
+	public boolean borrarElemento(String pathDatos, int posicion) {
+		int i = 0;
+		boolean retorno = true;
+		T t = leer(pathDatos, i);
+		while (t != null) {
+			if (i != posicion) {
+				grabar("copia", t, true);
+			}
+			i++;
+			t = leer(pathDatos, i);
+		}
+		File original = new File(pathDatos);
+		File copia = new File("copia");
+		if(!copia.exists()){
+			try {
+				copia.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		if (!original.delete() || !copia.renameTo(original)) {
+			retorno = false;
+		}
+		return retorno;
 	}
 
 	
